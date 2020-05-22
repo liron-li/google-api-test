@@ -19,7 +19,7 @@ function initializeAnalytics()
   // Use the developers console and download your service account
   // credentials in JSON format. Place them in this directory or
   // change the key file location if necessary.
-  $KEY_FILE_LOCATION = __DIR__ . '/mellifluous01-1373-f8724cdadcf7.json';
+  $KEY_FILE_LOCATION = __DIR__ . '/online-cps-5ec7600b55684a3d9bcbf7564bd660eacd9ed703.json';
 
   // Create and configure a new client object.
   $client = new Google_Client();
@@ -41,7 +41,7 @@ function initializeAnalytics()
 function getReport($analytics) {
 
   // Replace with your view ID, for example XXXX.
-  $VIEW_ID = "219129749";
+  $VIEW_ID = "215316090";
 
   // Create the DateRange object.
   $dateRange = new Google_Service_AnalyticsReporting_DateRange();
