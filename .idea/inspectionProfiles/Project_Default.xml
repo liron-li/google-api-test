@@ -6,6 +6,7 @@
       <option name="CUSTOM_RULESET_PATH" value="$PROJECT_DIR$/phpcs.xml.dist" />
       <option name="USE_INSTALLED_PATHS" value="true" />
       <option name="INSTALLED_PATHS" value="$PROJECT_DIR$/vendor/phpcompatibility/php-compatibility/PHPCompatibility" />
+      <option name="EXTENSIONS" value="php,js,css,inc" />
     </inspection_tool>
   </profile>
 </component>
