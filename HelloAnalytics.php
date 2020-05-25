@@ -57,11 +57,15 @@ function getReport($analytics) {
   $sessions->setExpression("ga:sessions");
   $sessions->setAlias("sessions");
 
+  $pageview = new Google_Service_AnalyticsReporting_Metric();
+  $pageview->setExpression("ga:pageviews");
+  $pageview->setAlias('pageviews');
+
   // Create the ReportRequest object.
   $request = new Google_Service_AnalyticsReporting_ReportRequest();
   $request->setViewId($VIEW_ID);
   $request->setDateRanges([$dateRange, $dateRange1]);
-  $request->setMetrics(array($sessions));
+  $request->setMetrics([$sessions, $pageview]);
 
   $body = new Google_Service_AnalyticsReporting_GetReportsRequest();
   $body->setReportRequests( array( $request) );
