@@ -55,7 +55,6 @@ function getReport($analytics) {
 
   $pageviews = new Google_Service_AnalyticsReporting_Metric();
   $pageviews->setExpression('ga:pageviews');
-  $pageviews->setAlias('pageviews');
 
   // Create the ReportRequest object.
   $request = new Google_Service_AnalyticsReporting_ReportRequest();
