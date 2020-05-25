@@ -72,7 +72,7 @@ function getReport($analytics) {
  * @param An Analytics Reporting API V4 response.
  */
 function printResults($reports) {
-    var_dump($reports);
+    var_dump(json_encode($reports));
   for ( $reportIndex = 0; $reportIndex < count( $reports ); $reportIndex++ ) {
     $report = $reports[ $reportIndex ];
     $header = $report->getColumnHeader();
