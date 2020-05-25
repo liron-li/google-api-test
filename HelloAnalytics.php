@@ -50,6 +50,7 @@ function getReport($analytics) {
 
   // Create the Metrics object.
   $sessions = new Google_Service_AnalyticsReporting_Metric();
+  $sessions->setExpression("ga:pageviews");
   $sessions->setExpression("ga:sessions");
   $sessions->setAlias("sessions");
 
