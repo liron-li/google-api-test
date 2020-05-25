@@ -48,6 +48,10 @@ function getReport($analytics) {
   $dateRange->setStartDate("7daysAgo");
   $dateRange->setEndDate("today");
 
+  $dateRange1 = new Google_Service_AnalyticsReporting_DateRange();
+  $dateRange1->setStartDate('2020-05-24');
+  $dateRange1->setEndDate('2020-05-24');
+
   // Create the Metrics object.
   $sessions = new Google_Service_AnalyticsReporting_Metric();
   $sessions->setExpression("ga:sessions");
@@ -56,7 +60,7 @@ function getReport($analytics) {
   // Create the ReportRequest object.
   $request = new Google_Service_AnalyticsReporting_ReportRequest();
   $request->setViewId($VIEW_ID);
-  $request->setDateRanges($dateRange);
+  $request->setDateRanges([$dateRange, $dateRange1]);
   $request->setMetrics(array($sessions));
 
   $body = new Google_Service_AnalyticsReporting_GetReportsRequest();
